@@ -2,8 +2,11 @@
 ##### _Site Web de Vente à emporter_
 ## Statique
 La version statique est une version n'utilisant que du HTML/CSS/JS natif.
+Cette version se trouve dans le dossier "docs".
 
 Framework CSS: Bootstrap
+
+Page uploadée: https://equinetpaul.github.io/EatOnline/
 
 ## Dynamique
 La version dynamique est basée sur la version statique à partir de laquelle nous avons ajouté le PHP et la base de donnée MySQL.
