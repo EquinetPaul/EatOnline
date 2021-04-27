@@ -1,0 +1,128 @@
+{
+	"1": {
+		"name": "Américain Mix",
+		"description": "3 Steaks, 3 Fromages, Sauce, Salade, Tomage, Oignons. Servis avec Frites",
+		"price": 10,
+		"stock": 10,
+		"category": 0
+	},
+	"2": {
+		"name": "Américain Traditionnel",
+		"description": "Baguette Traditionnelle, Steack Hach\u00e9, Fromage, Sauce, Salade, Tomage, Oignons. Servis avec Frites",
+		"price": 10,
+		"stock": 10,
+		"category": 0
+	},
+	"3": {
+		"name": "Américain",
+		"description": "Baguette, Tranches de Boeuf, Sauce, Salade, Tomate, Oignons, Cr\u00e8me. Servis avec Frites",
+		"price": 10,
+		"stock": 10,
+		"category": 0
+	},
+	"4": {
+		"name": "Américain Veggie",
+		"description": "Fondu de Tomages, Oeufs, Sauce, Cornichons. Servis avec Frites",
+		"price": 10,
+		"stock": 10,
+		"category": 0
+	},
+	"5": {
+		"name": "Américain Poisson",
+		"description": "Thon, Olives, Sauce, Salade, Tomage. Servis avec Frites.",
+		"price": 10,
+		"stock": 10,
+		"category": 0
+	},
+	"6": {
+		"name": "Américain Steaks",
+		"description": "3 Gros Steacks, Sauce, Salade, Tomage, Oignons. Servis avec Frites",
+		"price": 10,
+		"stock": 10,
+		"category": 0
+	},
+	"7": {
+		"name": "Green Burger",
+		"description": "Servis avec frites et boisson.",
+		"price": 10,
+		"stock": 10,
+		"category": 1
+	},
+	"8": {
+		"name": "Easy Burger",
+		"description": "Servis avec frites et boisson.",
+		"price": 10,
+		"stock": 10,
+		"category": 1
+	},
+	"9": {
+		"name": "Burger Raclette",
+		"description": "Servis avec frites et boisson.",
+		"price": 10,
+		"stock": 10,
+		"category": 1
+	},
+	"10": {
+		"name": "Burger Bacon",
+		"description": "Servis avec frites et boisson.",
+		"price": 10,
+		"stock": 10,
+		"category": 1
+	},
+	"11": {
+		"name": "Simple Burger",
+		"description": "Servis avec frites et boisson.",
+		"price": 10,
+		"stock": 10,
+		"category": 1
+	},
+	"12": {
+		"name": "Burger Chèvre",
+		"description": "Servis avec frites et boisson.",
+		"price": 10,
+		"stock": 10,
+		"category": 1
+	},
+	"13": {
+		"name": "Pizza Halloween",
+		"description": "Servis avec frites et boisson.",
+		"price": 10,
+		"stock": 10,
+		"category": 3
+	},
+	"14": {
+		"name": "Pizza Cool",
+		"description": "Servis avec frites et boisson.",
+		"price": 10,
+		"stock": 10,
+		"category": 3
+	},
+	"15": {
+		"name": "Pizza Chorizo",
+		"description": "Servis avec frites et boisson.",
+		"price": 10,
+		"stock": 10,
+		"category": 3
+	},
+	"16": {
+		"name": "Pizza 4 Fromages",
+		"description": "Servis avec frites et boisson.",
+		"price": 10,
+		"stock": 10,
+		"category": 3
+	},
+	"17": {
+		"name": "Pizza Olives",
+		"description": "Servis avec frites et boisson.",
+		"price": 10,
+		"stock": 10,
+		"category": 3
+	},
+	"18": {
+		"name": "Pizza Veggie",
+		"description": "Servis avec frites et boisson.",
+		"price": 10,
+		"stock": 10,
+		"category": 3
+	}
+}
