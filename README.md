@@ -2,6 +2,7 @@
 ##### _Site Web de Vente à emporter_
 ## Statique
 La version statique est une version n'utilisant que du HTML/CSS/JS natif.
+
 Framework CSS: Bootstrap
 
 ## Dynamique
