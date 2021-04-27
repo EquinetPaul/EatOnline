@@ -17,4 +17,4 @@ Pour installer le site sur votre serveur:
 - Importer les fichiers SQL ("eatonline.sql" et "data.sql") dans MySQL (ou directement via PHPMyAdmin)
 
 
-### Réalisé par BHATTI Tahirah & EQUINET Paul
+### Réalisé par EQUINET Paul
