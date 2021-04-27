@@ -1,1 +1,435 @@
-test
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="assets/css/style.css"/>
+      <link rel="stylesheet" href="assets/css/bootstrap.css"/>
+      <link rel="icon" href="img/site/favicon.ico"/>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+      <script src="https://kit.fontawesome.com/c2cc4bfa3d.js" crossorigin="anonymous"></script>
+      <title>EatOnline | Boutique</title>
+   </head>
+   <body>
+      <div class="promoBar pointer-cursor" id="promoBar">
+         <p>
+            PROMO: 50% de réduction sur une séléction de produits!
+            <strong>👉<a href="#" class="p-2 text-blue">C'est par ici</a></strong>
+            <i class="fas fa-times hover-cursor-pointer" onclick="hideThisParent(this)"></i>
+         </p>
+      </div>
+      <div class="container">
+         <header class="blog-header py-3 d-flex justify-content-between" id="header">
+            <a href="#header" onclick="changeCategory(0)"><img class="logoHeader" src="img/site/logo.gif" alt="logo_site"></a>
+            <div class="boxHeaderContent">
+               <a href="#" class="text-muted" data-toggle="tooltip" title="Mon Compte"><i class="bi bi-person"></i></a>
+               <a href="#" class="text-muted" data-toggle="tooltip" title="Notification"><i class="bi bi-bell"></i></a>
+               <a href="#" class="text-muted" data-toggle="tooltip" title="Panier"><i class="bi bi-cart"></i></a>
+               <a href="contact.html" class="text-muted" data-toggle="tooltip" title="Contact"><i class="bi bi-envelope"></i></a>
+            </div>
+         </header>
+         <p class="text-muted">Categories (9)</p>
+         <div class="nav-scroller py-1 mb-2">
+            <nav class="nav d-flex justify-content-between categoryBox">
+               <a class="p-2 text-muted btn" href="#" id="cat0" onclick="changeCategory(1)">
+                  <img class="imgCategory" src="img/site/category/american.png" alt="Americain">
+                  <p>Américain</p>
+               </a>
+               <a class="p-2 text-muted btn" href="#" id="cat1" onclick="changeCategory(2)">
+                  <img class="imgCategory" src="img/site/category/burger.png" alt="Burger">
+                  <p>Burger</p>
+               </a>
+               <a class="p-2 text-muted btn disabled" href="#" id="cat2" onclick="changeCategory(3)">
+                  <img class="imgCategory" src="img/site/category/fastfood.png" alt="Fastfood">
+                  <p>FastFood</p>
+               </a>
+               <a class="p-2 text-muted btn" href="#" id="cat3" onclick="changeCategory(4)">
+                  <img class="imgCategory" src="img/site/category/pizza.png" alt="Pizza">
+                  <p>Pizza</p>
+               </a>
+               <a class="p-2 text-muted btn disabled" href="#" id="cat4" onclick="changeCategory(5)">
+                  <img class="imgCategory" src="img/site/category/japanese.png" alt="Japonais">
+                  <p>Japonais</p>
+               </a>
+               <a class="p-2 text-muted btn disabled" href="#" id="cat5" onclick="changeCategory(6)">
+                  <img class="imgCategory" src="img/site/category/sushi.png" alt="Sushi">
+                  <p>Sushi</p>
+               </a>
+               <a class="p-2 text-muted btn disabled" href="#" id="cat6" onclick="changeCategory(7)">
+                  <img class="imgCategory" src="img/site/category/french.png" alt="Français">
+                  <p>Français</p>
+               </a>
+               <a class="p-2 text-muted btn disabled" href="#" id="cat7" onclick="changeCategory(8)">
+                  <img class="imgCategory" src="img/site/category/italian.png" alt="Italien">
+                  <p>Italien</p>
+               </a>
+               <a class="p-2 text-muted btn disabled" href="#" id="cat8" onclick="changeCategory(9)">
+                  <img class="imgCategory" src="img/site/category/thai.png" alt="Thai">
+                  <p>Thai</p>
+               </a>
+            </nav>
+         </div>
+         <hr>
+         <div class="row" id="accueil">
+            <h2>Bienvenue sur EatOnline</h2>
+            <h6>Leader du service de <strong>livraison</strong> inter-restaurants!</h6>
+            <div class="text-center">
+               <i class="bi bi-cart4 fa-3x"></i>
+               <i class="bi bi-arrow-right fa-3x"></i>
+               <i class="bi bi-hourglass-bottom fa-3x"></i>
+               <i class="bi bi-arrow-right fa-3x"></i>
+               <i class="bi bi-house fa-3x"></i>
+               <h3>Commandez - Patientez - C'est livré!</h3>
+            </div>
+         </div>
+         <div class="row" id="americain" hidden>
+            <h2>
+               Américain
+               <button type="button" name="displayStock" class="btn btn-secondary" value="0" onclick="displayStock(this)">Afficher les stocks</button>
+            </h2>
+            <div class="card-group">
+               <div class="card hover-cursor-pointer" onclick="openOverlay(1)">
+                  <img src="img/products/items/product1.jpg" height="180px" class="card-img-top" alt="...">
+                  <div class="card-body">
+                     <h5 class="card-title">Américain Mix</h5>
+                     <p class="card-text">3 Steaks, 3 Fromages, Sauce, Salade, Tomage, Oignons. Servis avec Frites</p>
+                  </div>
+                  <div class="card-footer">
+                     <div>
+                        <h3>10€</h3>
+                        <p class="displayStock" hidden>Stock: 10</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="card hover-cursor-pointer" onclick="openOverlay(2)">
+                  <img src="img/products/items/product2.jpg" height="180px" class="card-img-top" alt="...">
+                  <div class="card-body">
+                     <h5 class="card-title">Américain Traditionnel</h5>
+                     <p class="card-text">Baguette Traditionnelle, Steack Haché, Fromage, Sauce, Salade, Tomage, Oignons. Servis avec Frites</p>
+                  </div>
+                  <div class="card-footer">
+                     <div>
+                        <h3>10€</h3>
+                        <p class="displayStock" hidden>Stock: <span>10</span></p>
+                     </div>
+                  </div>
+               </div>
+               <div class="card hover-cursor-pointer" onclick="openOverlay(3)">
+                  <img src="img/products/items/product3.jpg" height="180px" class="card-img-top" alt="...">
+                  <div class="card-body">
+                     <h5 class="card-title">Américain </h5>
+                     <p class="card-text">Baguette, Tranches de Boeuf, Sauce, Salade, Tomate, Oignons, Crème. Servis avec Frites</p>
+                  </div>
+                  <div class="card-footer">
+                     <div>
+                        <h3>10€</h3>
+                        <p class="displayStock" hidden>Stock: 10</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="card-group">
+               <div class="card  hover-cursor-pointer" onclick="openOverlay(4)">
+                  <img src="img/products/items/product4.jpg" height="180px" class="card-img-top" alt="...">
+                  <div class="card-body">
+                     <h5 class="card-title">Américain Veggie</h5>
+                     <p class="card-text">Fondu de Tomages, Oeufs, Sauce, Cornichons. Servis avec Frites</p>
+                  </div>
+                  <div class="card-footer">
+                     <div>
+                        <h3>10€</h3>
+                        <p class="displayStock" hidden>Stock: 10</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="card hover-cursor-pointer" onclick="openOverlay(5)">
+                  <img src="img/products/items/product5.jpg" height="180px" class="card-img-top" alt="...">
+                  <div class="card-body">
+                     <h5 class="card-title">Américain Poisson</h5>
+                     <p class="card-text">Thon, Olives, Sauce, Salade, Tomage. Servis avec Frites.</p>
+                  </div>
+                  <div class="card-footer">
+                     <div>
+                        <h3>10€</h3>
+                        <p class="displayStock" hidden>Stock: 10</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="card hover-cursor-pointer" onclick="openOverlay(6)">
+                  <img src="img/products/items/product6.jpg" height="180px" class="card-img-top" alt="...">
+                  <div class="card-body">
+                     <h5 class="card-title">Américain Steacks</h5>
+                     <p class="card-text">3 Gros Steacks, Sauce, Salade, Tomage, Oignons. Servis avec Frites</p>
+                  </div>
+                  <div class="card-footer">
+                     <div>
+                        <h3>10€</h3>
+                        <p class="displayStock" hidden>Stock: 10</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="row" id="burger" hidden>
+           <h2>
+              Burger
+              <button type="button" name="displayStock" class="btn btn-secondary" value="0" onclick="displayStock(this)">Afficher les stocks</button>
+           </h2>
+           <div class="card-group">
+              <div class="card  hover-cursor-pointer" onclick="openOverlay(7)">
+                 <img src="img/products/items/product7.jpg" height="180px" class="card-img-top" alt="...">
+                 <div class="card-body">
+                    <h5 class="card-title">Green Burger</h5>
+                    <p class="card-text">Servis avec frites et boisson.</p>
+                 </div>
+                 <div class="card-footer">
+                    <div>
+                       <h3>10€</h3>
+                       <p class="displayStock" hidden>Stock: 10</p>
+                    </div>
+                 </div>
+              </div>
+              <div class="card  hover-cursor-pointer" onclick="openOverlay(8)">
+                 <img src="img/products/items/product8.jpg" height="180px" class="card-img-top" alt="...">
+                 <div class="card-body">
+                    <h5 class="card-title">Easy Burger</h5>
+                    <p class="card-text">Servis avec frites et boisson.</p>
+                 </div>
+                 <div class="card-footer">
+                    <div>
+                       <h3>10€</h3>
+                       <p class="displayStock" hidden>Stock: 10</p>
+                    </div>
+                 </div>
+              </div>
+              <div class="card  hover-cursor-pointer" onclick="openOverlay(9)">
+                 <img src="img/products/items/product9.jpg" height="180px" class="card-img-top" alt="...">
+                 <div class="card-body">
+                    <h5 class="card-title">Burger Raclette</h5>
+                    <p class="card-text">Servis avec frites et boisson.</p>
+                 </div>
+                 <div class="card-footer">
+                    <div>
+                       <h3>10€</h3>
+                       <p class="displayStock" hidden>Stock: 10</p>
+                    </div>
+                 </div>
+              </div>
+           </div>
+           <div class="card-group">
+              <div class="card  hover-cursor-pointer" onclick="openOverlay(10)">
+                 <img src="img/products/items/product10.jpg" height="180px" class="card-img-top" alt="...">
+                 <div class="card-body">
+                    <h5 class="card-title">Burger Bacon</h5>
+                    <p class="card-text">Servis avec frites et boisson.</p>
+                 </div>
+                 <div class="card-footer">
+                    <div>
+                       <h3>10€</h3>
+                       <p class="displayStock" hidden>Stock: 10</p>
+                    </div>
+                 </div>
+              </div>
+              <div class="card  hover-cursor-pointer" onclick="openOverlay(11)">
+                 <img src="img/products/items/product11.jpg" height="180px" class="card-img-top" alt="...">
+                 <div class="card-body">
+                    <h5 class="card-title">Simple Buger</h5>
+                    <p class="card-text">Servis avec frites et boisson.</p>
+                 </div>
+                 <div class="card-footer">
+                    <div>
+                       <h3>10€</h3>
+                       <p class="displayStock" hidden>Stock: 10</p>
+                    </div>
+                 </div>
+              </div>
+              <div class="card  hover-cursor-pointer" onclick="openOverlay(12)">
+                 <img src="img/products/items/product12.jpg" height="180px" class="card-img-top" alt="...">
+                 <div class="card-body">
+                    <h5 class="card-title">Burger Chèvre</h5>
+                    <p class="card-text">Servis avec frites et boisson.</p>
+                 </div>
+                 <div class="card-footer">
+                    <div>
+                       <h3>10€</h3>
+                       <p class="displayStock" hidden>Stock: 10</p>
+                    </div>
+                 </div>
+              </div>
+           </div>
+         </div>
+         <div class="row" id="fastfood" hidden>
+            <div class="alert alert-warning" role="alert">
+               (FastFood) Page Actuellement indisponible!
+            </div>
+         </div>
+         <div class="row" id="pizza" hidden>
+           <h2>
+              Américain
+              <button type="button" name="displayStock" class="btn btn-secondary" value="0" onclick="displayStock(this)">Afficher les stocks</button>
+           </h2>
+           <div class="card-group">
+              <div class="card hover-cursor-pointer" onclick="openOverlay(13)">
+                 <img src="img/products/items/product13.jpg" height="180px" class="card-img-top" alt="...">
+                 <div class="card-body">
+                    <h5 class="card-title">Pizza Halloween</h5>
+                    <p class="card-text">Servis avec frites et boisson.</p>
+                 </div>
+                 <div class="card-footer">
+                    <div>
+                       <h3>10€</h3>
+                       <p class="displayStock" hidden>Stock: 10</p>
+                    </div>
+                 </div>
+              </div>
+              <div class="card hover-cursor-pointer" onclick="openOverlay(14)">
+                 <img src="img/products/items/product14.jpg" height="180px" class="card-img-top" alt="...">
+                 <div class="card-body">
+                    <h5 class="card-title">Pizza Champis-Jambo</h5>
+                    <p class="card-text">Servis avec frites et boisson.</p>
+                 </div>
+                 <div class="card-footer">
+                    <div>
+                       <h3>10€</h3>
+                       <p class="displayStock" hidden>Stock: <span>10</span></p>
+                    </div>
+                 </div>
+              </div>
+              <div class="card hover-cursor-pointer" onclick="openOverlay(15)">
+                 <img src="img/products/items/product15.jpg" height="180px" class="card-img-top" alt="...">
+                 <div class="card-body">
+                    <h5 class="card-title">Pizza Chorizo</h5>
+                    <p class="card-text">Servis avec frites et boisson.</p>
+                 </div>
+                 <div class="card-footer">
+                    <div>
+                       <h3>10€</h3>
+                       <p class="displayStock" hidden>Stock: 10</p>
+                    </div>
+                 </div>
+              </div>
+           </div>
+           <div class="card-group">
+              <div class="card  hover-cursor-pointer" onclick="openOverlay(16)">
+                 <img src="img/products/items/product16.jpg" height="180px" class="card-img-top" alt="...">
+                 <div class="card-body">
+                    <h5 class="card-title">Pizza 4 Fromages</h5>
+                    <p class="card-text">Servis avec frites et boisson.</p>
+                 </div>
+                 <div class="card-footer">
+                    <div>
+                       <h3>10€</h3>
+                       <p class="displayStock" hidden>Stock: 10</p>
+                    </div>
+                 </div>
+              </div>
+              <div class="card hover-cursor-pointer" onclick="openOverlay(17)">
+                 <img src="img/products/items/product17.jpg" height="180px" class="card-img-top" alt="...">
+                 <div class="card-body">
+                    <h5 class="card-title">Pizza Olive</h5>
+                    <p class="card-text">Servis avec frites et boisson.</p>
+                 </div>
+                 <div class="card-footer">
+                    <div>
+                       <h3>10€</h3>
+                       <p class="displayStock" hidden>Stock: 10</p>
+                    </div>
+                 </div>
+              </div>
+              <div class="card hover-cursor-pointer" onclick="openOverlay(18)">
+                 <img src="img/products/items/product18.jpg" height="180px" class="card-img-top" alt="...">
+                 <div class="card-body">
+                    <h5 class="card-title">Pizza Veggie</h5>
+                    <p class="card-text">Servis avec frites et boisson.</p>
+                 </div>
+                 <div class="card-footer">
+                    <div>
+                       <h3>10€</h3>
+                       <p class="displayStock" hidden>Stock: 10</p>
+                    </div>
+                 </div>
+              </div>
+           </div>
+         </div>
+         <div class="row" id="japonais" hidden>
+            <div class="alert alert-warning" role="alert">
+               (Japonais) Page Actuellement indisponible!
+            </div>
+         </div>
+         <div class="row" id="sushi" hidden>
+            <div class="alert alert-warning" role="alert">
+               (Sushi) Page Actuellement indisponible!
+            </div>
+         </div>
+         <div class="row" id="francais" hidden>
+            <div class="alert alert-warning" role="alert">
+               (Français) Page Actuellement indisponible!
+            </div>
+         </div>
+         <div class="row" id="italien" hidden>
+            <div class="alert alert-warning" role="alert">
+               (Italien) Page Actuellement indisponible!
+            </div>
+         </div>
+         <div class="row" id="thai" hidden>
+            <div class="alert alert-warning" role="alert">
+               (Thaï) Page Actuellement indisponible!
+            </div>
+         </div>
+      </div>
+      <div id="overlay">
+         <div id="text">
+            <div class="card" style="width: 18rem;">
+               <img id="overlay-card-img" height="180px" class="card-img-top" src="" alt="Product Image">
+               <div class="card-body">
+                  <h5 class="card-title">Votre produit</h5>
+                  <p class="card-text" id="overlay-card-text"></p>
+                  <a href="#" class="btn btn-primary">Ajouter</a>
+                  <a href="#" onclick="closeOverlay()" class="btn btn-danger">Fermer</a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <footer class="bg-light text-center text-lg-start">
+         <div class="container p-4">
+            <div class="row">
+               <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                  <img src="img/site/logo.gif" alt="logo_site" width="150px">
+                  <p>
+                     Une faim? Choisissez parmi notre séléction de restaurant et faites vous livrer!
+                     La séléction n'est pas réservée qu'à un seul restaurant, vous pouvez choisir de manger des sushis et une pizza.
+                  </p>
+               </div>
+               <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                  <h5 class="text-uppercase">Catégories</h5>
+                  <ul class="list-unstyled mb-0">
+                     <li><a href="#header" class="text-dark" onclick="changeCategory(1)">Américain</a></li>
+                     <li><a href="#header" class="text-dark" onclick="changeCategory(2)">Burger</a></li>
+                     <li><a href="#header" class="text-dark">FastFood</a></li>
+                     <li><a href="#header" class="text-dark" onclick="changeCategory(4)">Pizza</a></li>
+                     <li><a href="#header" class="text-dark">Japonais</a></li>
+                     <li><a href="#header" class="text-dark">Sushi</a></li>
+                     <li><a href="#header" class="text-dark">Français</a></li>
+                     <li><a href="#header" class="text-dark">Italien</a></li>
+                     <li><a href="#header" class="text-dark">Thaï</a></li>
+                  </ul>
+               </div>
+               <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                  <h5 class="text-uppercase mb-0">Liens utiles</h5>
+                  <ul class="list-unstyled">
+                     <li>
+                     <li><a href="#!" class="text-dark">Mon Compte</a></li>
+                     <li><a href="#!" class="text-dark">Notifications</a></li>
+                     <li><a href="#!" class="text-dark">Panier</a></li>
+                     <li><a href="#!" class="text-dark">Messagerie</a></li>
+                     <li><a href="contact.html" class="text-dark">Nous contacter</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2021 Copyright: Bhatti & Equinet
+         </div>
+      </footer>
+   </body>
+   <script src="assets/js/script.js"></script>
+</html>
